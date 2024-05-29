@@ -20,65 +20,63 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="the-main-header">
-    <figure>
-      <img src="img/logo.svg" alt="Logo">
-      <figcaption>
-        <h1>My App</h1>
-        <p>My app is awesome</p>
-      </figcaption>
-    </figure>
+  <div class="app">
+    <header class="the-main-header">
+      <figure class="the-main-logo the-main-header__the-main-logo">
+        <a class="the-main-logo__link" href="#">A</a>
+        <!--      <img class="the-main-logo__img" src="img/logo.svg" alt="Logo">-->
+      </figure>
 
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+      <nav class="the-main-nav">
+        <div class="the-main-nav__item"><a class="the-main-nav__link" href="#">About</a></div>
+        <div class="the-main-nav__item"><a class="the-main-nav__link" href="#">Skills</a></div>
+        <div class="the-main-nav__item"><a class="the-main-nav__link" href="#">Projects</a></div>
+      </nav>
 
-      <button>Contact me</button>
-  </header>
+      <div class="the-contact-button the-main-header__the-contact-button">
+        <div class="the-contact-button__left-border"></div>
+        <span class="the-contact-button__button">Contact Me</span>
+      </div>
+    </header>
 
-  <section>
-    <main>
-      <h1>Hello</h1>
-      <h2>Hello</h2>
-      <p>Welcome to my app</p>
-    </main>
-  </section>
+    <section class="the-section">
+      <main class="the-first-screen">
+        <div class="the-first-screen__photo">
+          <img src="" alt="">
+        </div>
 
-  <section>
-    <div class="the-portfolio">
-      <h2>Portfolio</h2>
-      <ul class="the-portfolio__list">
-        <li class="portfolio-item">
-          <img src="img/portfolio-1.jpg" alt="Portfolio item">
-          <h3>Portfolio item</h3>
-          <p>Portfolio item description</p>
-        </li>
+        <div class="the-first-screen__info the-main-info">
+          <div class="the-main-info__list">
+            <div class="the-main-info__item">
+              <div class="the-main-info__label">Name:</div>
+              <div class="the-main-info__value">Kirill Murashkin</div>
+            </div>
 
-        <li class="portfolio-item">
-          <img src="img/portfolio-2.jpg" alt="Portfolio item">
-          <h3>Portfolio item</h3>
-          <p>Portfolio item description</p>
-        </li>
+            <div class="the-main-info__item">
+              <div class="the-main-info__label">Date of birth:</div>
+              <div class="the-main-info__value">20 of March of 1992</div>
+            </div>
+          </div>
 
-        <li class="portfolio-item">
-          <img src="img/portfolio-3.jpg" alt="Portfolio item">
-          <h3>Portfolio item</h3>
-          <p>Portfolio item description</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+          <div class="the-main-info__bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cum doloribus error fuga ipsam laboriosam libero, obcaecati quae recusandae repellat suscipit veritatis voluptatum? Assumenda cum doloremque ex iusto vitae.</div>
+        </div>
+      </main>
+    </section>
 
-  <footer>
-    <p>&copy; 2021 My App</p>
-  </footer>
+    <section class="the-section">
+      <div class="the-card">
+        <div class="the-card__title">About Me</div>
+        <div class="the-card__desc">Some description</div>
+      </div>
+    </section>
+  </div>
 
   <script src="js/app.js"></script>
 </body>
