@@ -5,9 +5,9 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    liveReload: true,
-    hot: true,
-    open: true,
+    liveReload: false,
+    hot: false,
+    open: false,
     static: ['./'],
   },
 });
