@@ -1,0 +1,117 @@
+.the-main-header {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px;
+  align-items: start;
+  height: 100px;
+  padding: 20px 10px;
+
+  & .the-contact-button {
+    justify-self: end;
+  }
+}
+
+.the-main-logo {
+  & .the-main-logo__link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color__white--main);
+  }
+}
+
+.the-main-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.the-main-nav__item {
+  margin-right: 20px;
+}
+
+.the-main-nav__link {
+  position: relative;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color__gray--main);
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    color: var(--color__white--main);
+  }
+}
+
+.the-contact-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: solid 1px var(--color__gray--main);
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+  cursor: pointer;
+  color: var(--color__gray--main);
+  transition: 0.5s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background: var(--color__dark--main);
+    transition: 0.5s;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1000px;
+    width: 1000px;
+    height: 1px;
+    background-image: linear-gradient(to right, var(--color__dark--main), var(--color__gray--main));
+    transition: 0.5s;
+    pointer-events: none;
+  }
+
+  & .the-contact-button__left-border {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 100px;
+    height: 0;
+    border: solid 0 var(--color__gray--main);
+    border-left-width: 1px;
+    border-radius: 0;
+    transition: 0.5s;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    left: 0;
+    width: 0;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 0;
+  }
+
+  &:hover .the-contact-button__left-border {
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    border-radius: 5px;
+    color: var(--color__white--main);
+  }
+}
+
+
