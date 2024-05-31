@@ -20,27 +20,122 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  padding: 20px 10px;
-  background: var(--color__metallic--main);
-  border-radius: 20px;
+  padding: 20px 30px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+  border: solid 4px var(--color__dark--main);
+  border-radius: 2px;
 
   & .the-first-screen__photo {
-    height: 400px;
+    height: 490px;
+    padding: 20px 10px;
+    background-size: cover;
   }
 
   & .the-first-screen__info {
-    height: 400px;
+    height: 490px;
   }
 }
 
 .the-main-info {
-  padding: 20px 10px;
+  padding: 20px 30px;
   border-radius: 20px;
   background-color: var(--color__dark--main);
 
   & .the-main-info__title {
-    font-size: 6em;
+    letter-spacing: -3px;
+    font-size: 4em;
     font-weight: bold;
     text-transform: uppercase;
+  }
+
+  & .the-main-info__list {
+    margin-top: 30px;
+  }
+
+  & .the-main-info__item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    line-height: 2rem;
+  }
+
+  & .the-main-info__label {
+    color: var(--color__gray--main);
+    letter-spacing: -1px;
+  }
+
+  & .the-main-info__value {
+    margin-left: 10px;
+    text-align: right;
+    letter-spacing: -0.5px;
+  }
+}
+
+.the-full-description {
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.the-bio {
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    letter-spacing: -0.2px;
+    line-height: 1.3em;
+    color: var(--color__white--main);
+  }
+
+  & .the-bio__span--highlight--green {
+    color: var(--color__green--main);
+  }
+
+  & .the-bio__span--highlight--pink {
+    color: var(--color__pink--main);
+  }
+}
+
+.the-timeline {
+  position: relative;
+  padding-right: 100px;
+
+  & .the-timeline__line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    right: 20px;
+    background: var(--color__white--main);
+  }
+
+  & .the-timeline__item {
+    margin-bottom: 50px;
+    text-align: right;
+    color: var(--color__white--main);
+  }
+
+  & .the-timeline__item-title {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+  }
+
+  & .the-timeline__item-date {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+  }
+
+  & .the-timeline__item-description {
+    line-height: 1.3em;
+    font-size: 1.3em;
   }
 }

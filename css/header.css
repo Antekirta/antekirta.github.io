@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 100px 1fr 200px;
   align-items: start;
-  height: 100px;
   padding: 20px 10px;
 
   & .the-contact-button {
@@ -21,24 +20,24 @@
 .the-main-nav {
   display: flex;
   justify-content: flex-start;
-}
 
-.the-main-nav__item {
-  margin-right: 20px;
-}
+  .the-main-nav__item {
+    margin-right: 20px;
+  }
 
-.the-main-nav__link {
-  position: relative;
-  margin-right: 20px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color__gray--main);
-  cursor: pointer;
-  transition: 0.5s;
+  .the-main-nav__link {
+    position: relative;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color__gray--main);
+    cursor: pointer;
+    transition: 0.5s;
 
-  &:hover {
-    color: var(--color__white--main);
+    &:hover {
+      color: var(--color__white--main);
+    }
   }
 }
 

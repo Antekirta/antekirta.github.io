@@ -21,3 +21,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--color__gray--main);
 }
+
+.the-section {
+  margin-top: 50px;
+}
