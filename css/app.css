@@ -33,6 +33,8 @@
   }
 
   & .the-first-screen__info {
+    display: grid;
+    grid-template-rows: 50px 1fr 30px;
     height: 490px;
   }
 }
@@ -71,6 +73,18 @@
     margin-left: 10px;
     text-align: right;
     letter-spacing: -0.5px;
+  }
+}
+
+.the-social-icons {
+  .the-social-icons__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  .the-social-icons__icon {
+    display: flex;
+    gap: 20px;
   }
 }
 
@@ -121,7 +135,12 @@
   & .the-timeline__item {
     margin-bottom: 50px;
     text-align: right;
-    color: var(--color__white--main);
+    color: var(--color__gray--main);
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--color__white--main);
+    }
   }
 
   & .the-timeline__item-title {
@@ -138,4 +157,58 @@
     line-height: 1.3em;
     font-size: 1.3em;
   }
+}
+
+.the-projects {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.the-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  border: solid 2px var(--color__white--main);
+  border-radius: 2px;
+  padding: 10px 20px;
+
+  & .the-card__title {
+    letter-spacing: -0.8px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  & .the-card__description {
+    font-size: 1.4em;
+    line-height: 1.3em;
+  }
+
+  & .the-card__tags {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  & .the-card__tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: solid 1px var(--color__white--main);
+    border-radius: 1px;
+  }
+}
+
+.the-footer {
+  height: 100px;
+}
+
+.the-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: var(--color__dark--main);
+  color: var(--color__gray--main);
+  font-size: 1.4em;
 }
